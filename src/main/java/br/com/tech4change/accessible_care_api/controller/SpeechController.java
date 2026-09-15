@@ -1,7 +1,9 @@
 package br.com.tech4change.accessible_care_api.controller;
 
+import br.com.tech4change.accessible_care_api.dto.SpeechSessionResponse;
 import br.com.tech4change.accessible_care_api.dto.SpeechTranscriptionResponse;
 import br.com.tech4change.accessible_care_api.service.SpeechService;
+import br.com.tech4change.accessible_care_api.service.SpeechSessionService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,13 +13,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class SpeechController {
 
     private final SpeechService service;
+    private final SpeechSessionService sessionService;
 
-    public SpeechController(SpeechService service) {
+    public SpeechController(SpeechService service, SpeechSessionService sessionService) {
         this.service = service;
+        this.sessionService = sessionService;
     }
 
     @PostMapping("/transcribe")
     public SpeechTranscriptionResponse transcribe() {
         return service.transcribe();
+    }
+
+    @PostMapping("/session")
+    public SpeechSessionResponse createSession() {
+        return sessionService.createSession();
     }
 }
