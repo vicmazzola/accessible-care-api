@@ -17,19 +17,22 @@ public class OciSpeechSessionClient implements SpeechSessionClient {
 
     private final String compartmentId;
     private final String region;
+    private final String configProfile;
 
     public OciSpeechSessionClient(
             @Value("${oci.compartment-id}") String compartmentId,
-            @Value("${oci.region}") String region
+            @Value("${oci.region}") String region,
+            @Value("${oci.config.profile}") String configProfile
     ) {
         this.compartmentId = compartmentId;
         this.region = region;
+        this.configProfile = configProfile;
     }
 
     @Override
     public SpeechSessionResponse createSession() {
         try {
-            var configFile = ConfigFileReader.parseDefault();
+            var configFile = ConfigFileReader.parseDefault(configProfile);
 
             var provider =
                     new ConfigFileAuthenticationDetailsProvider(configFile);
