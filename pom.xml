@@ -60,6 +60,11 @@
             <artifactId>oci-java-sdk-aispeech</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.oracle.oci.sdk</groupId>
+            <artifactId>oci-java-sdk-modeldeployment</artifactId>
+        </dependency>
+
         <!-- HTTP client required by OCI SDK -->
         <dependency>
             <groupId>com.oracle.oci.sdk</groupId>
