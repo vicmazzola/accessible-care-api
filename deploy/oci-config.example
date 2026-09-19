@@ -1,0 +1,13 @@
+[DEFAULT]
+user=<speech-user-ocid>
+fingerprint=<speech-api-key-fingerprint>
+tenancy=<tenancy-ocid>
+region=sa-saopaulo-1
+key_file=/root/.oci/default_api_key.pem
+
+[SPEAK]
+user=<model-deployment-user-ocid>
+fingerprint=<model-deployment-api-key-fingerprint>
+tenancy=<tenancy-ocid>
+region=sa-saopaulo-1
+key_file=/root/.oci/speak_api_key.pem

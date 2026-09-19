@@ -1,6 +1,11 @@
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
+.env
+.env.*
+.oci/
+*.pem
+*.key
 !**/src/main/**/target/
 !**/src/test/**/target/
 
