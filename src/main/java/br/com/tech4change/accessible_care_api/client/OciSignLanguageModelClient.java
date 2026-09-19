@@ -23,19 +23,16 @@ public class OciSignLanguageModelClient implements SignLanguageModelClient {
     private final String configProfile;
     private final String modelDeploymentId;
     private final JsonMapper jsonMapper;
-    private final String modelDeploymentEndpoint;
 
     public OciSignLanguageModelClient(
             @Value("${oci.region}") String region,
-            @Value("${oci.config.profile}") String configProfile,
+            @Value("${oci.model-deployment.config-profile}") String configProfile,
             @Value("${oci.model-deployment-id}") String modelDeploymentId,
-            @Value("${oci.model-deployment-endpoint}") String modelDeploymentEndpoint,
             JsonMapper jsonMapper
     ) {
         this.region = region;
         this.configProfile = configProfile;
         this.modelDeploymentId = modelDeploymentId;
-        this.modelDeploymentEndpoint = modelDeploymentEndpoint;
         this.jsonMapper = jsonMapper;
     }
 
