@@ -1,6 +1,7 @@
 package br.com.tech4change.accessible_care_api.service;
 
 import br.com.tech4change.accessible_care_api.client.SignLanguageModelClient;
+import br.com.tech4change.accessible_care_api.dto.SignLanguagePredictionRequest;
 import br.com.tech4change.accessible_care_api.dto.SignLanguageResponse;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ public class SignLanguageService {
         this.modelClient = modelClient;
     }
 
-    public SignLanguageResponse predict() {
-        return modelClient.predict();
+    public SignLanguageResponse predict(SignLanguagePredictionRequest request) {
+        return modelClient.predict(request);
     }
 }
