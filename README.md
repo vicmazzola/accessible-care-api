@@ -192,7 +192,7 @@ Never commit or publish OCI private keys, API keys, tokens, passwords, `.pem` fi
 
 FIAP Tech4Change 2026 — Group 01.
 
-- **Victor Silva Mazzola — Backend**
+- **Victor Silva Mazzola RM370764 — Backend**
     - Java 21 / Spring Boot backend
     - REST APIs and validation
     - OCI Speech session integration
@@ -200,7 +200,7 @@ FIAP Tech4Change 2026 — Group 01.
     - CORS, environment configuration, Docker and backend deployment
     - API and backend documentation
 
-- **Patrick Nascimento Andrade — Frontend**
+- **Patrick Nascimento Andrade RM369393 — Frontend**
     - Next.js / TypeScript frontend
     - Consultation interface
     - Camera and microphone integration
@@ -209,7 +209,7 @@ FIAP Tech4Change 2026 — Group 01.
     - Libras prediction and caption display
     - Frontend deployment on Vercel
 
-- **Fabiana Luizon Martins Campos — AI / OCI**
+- **Fabiana Luizon Martins Campos RM370325 — AI / OCI**
     - Libras dataset and preprocessing pipeline
     - Model experimentation and validation
     - OCI Data Science
